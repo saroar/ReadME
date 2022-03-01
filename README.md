@@ -4,15 +4,17 @@
 ### Пример использования
 ```swift
 MPAnalytics.shared.sendEvent(
-    eventName: "ScreenView",
+    eventName: screenName,
     properties: [
         "eventType": "page_view",
         "screenTitleName": "Title",
-		    "screenClassName": screenName
+        "screenClassName": screenName
     ],
-    location: nil) { error in
+    location: nil
+    ) { error in
         debugPrint(#line, error?.localizedDescription as Any)
     }
+
 ```
 
 ### 📦 Содержимое пакета для автоматического отслеживания 
@@ -36,7 +38,7 @@ MPAnalytics.shared.sendEvent(
           "value" : "page_view"
         }
       ],
-      "eventAction" : "ScreenView",
+      "eventAction" : "MPAnalyticsViewController",
     }
   ]
 }
